@@ -17,4 +17,7 @@ RUN apt-get update \
 
 ADD assets/salt/master /etc/salt/master
 
+EXPOSE 4505
+EXPOSE 4506
+
 ENTRYPOINT ["salt-master"]
