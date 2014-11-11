@@ -1,16 +1,7 @@
-log_fmt_console: '%(asctime)s,%(msecs)03.0f [%(name)-17s][%(levelname)-8s] %(message)s'
+#user: salt
 
-##### Primary configuration settings #####
-##########################################
-# This configuration file is used to manage the behavior of the Salt Master
-# Values that are commented out but have no space after the comment are
-# defaults that need not be set in the config. If there is a space after the
-# comment that the value is presented as an example and is not the default.
-
-# Per default, the master will automatically include all config files
-# from master.d/*.conf (master.d is a directory in the same directory
-# as the main master config file)
-#default_include: master.d/*.conf
+log_datefmt: '%Y-%m-%dT%H:%M:%S'
+log_fmt_console: '%(asctime)s.%(msecs)03.0f - %(name)s %(process)s [%(levelname)s] %(message)s'
 
 # The address of the interface to bind to
 #interface: 0.0.0.0
@@ -21,12 +12,6 @@ log_fmt_console: '%(asctime)s,%(msecs)03.0f [%(name)-17s][%(levelname)-8s] %(mes
 
 # The tcp port used by the publisher
 #publish_port: 4505
-
-# The user under which the salt master will run. Salt will update all
-# permissions to allow the specified user to run the master. The exception is
-# the job cache, which must be deleted if this user is changed.  If the
-# modified files cause conflicts set verify_env to False.
-#user: root
 
 # Max open files
 # Each minion connecting to the master uses AT LEAST one file descriptor, the
@@ -532,46 +517,8 @@ log_fmt_console: '%(asctime)s,%(msecs)03.0f [%(name)-17s][%(levelname)-8s] %(mes
 #     - network.*
 #     - disk.*
 
-#####         Logging settings       #####
-##########################################
-# The location of the master log file
-# The master log can be sent to a regular file, local path name, or network
-# location. Remote logging works best when configured to use rsyslogd(8) (e.g.:
-# ``file:///dev/log``), with rsyslogd(8) configured for network logging. The URI
-# format is: <file|udp|tcp>://<host|socketpath>:<port-if-required>/<log-facility>
-#log_file: /var/log/salt/master
-#log_file: file:///dev/log
-#log_file: udp://loghost:10514
-
-#log_file: /var/log/salt/master
 #key_logfile: /var/log/salt/key
-
-# The level of messages to send to the console.
-# One of 'garbage', 'trace', 'debug', info', 'warning', 'error', 'critical'.
 #log_level: warning
-
-# The level of messages to send to the log file.
-# One of 'garbage', 'trace', 'debug', info', 'warning', 'error', 'critical'.
-#log_level_logfile: warning
-
-# The date and time format used in log messages. Allowed date/time formating
-# can be seen here: http://docs.python.org/library/time.html#time.strftime
-#log_datefmt: '%H:%M:%S'
-#log_datefmt_logfile: '%Y-%m-%d %H:%M:%S'
-
-# The format of the console logging messages. Allowed formatting options can
-# be seen here: http://docs.python.org/library/logging.html#logrecord-attributes
-#log_fmt_console: '[%(levelname)-8s] %(message)s'
-#log_fmt_logfile: '%(asctime)s,%(msecs)03.0f [%(name)-17s][%(levelname)-8s] %(message)s'
-
-# This can be used to control logging levels more specificically.  This
-# example sets the main salt library at the 'warning' level, but sets
-# 'salt.modules' to log at the 'debug' level:
-#   log_granular_levels:
-#     'salt': 'warning',
-#     'salt.modules': 'debug'
-#
-#log_granular_levels: {}
 
 
 #####         Node Groups           #####
