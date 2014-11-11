@@ -20,4 +20,6 @@ ADD assets/salt/master /etc/salt/master
 EXPOSE 4505
 EXPOSE 4506
 
+VOLUME ["/data"]
+
 ENTRYPOINT ["salt-master"]
