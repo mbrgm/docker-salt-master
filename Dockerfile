@@ -21,5 +21,6 @@ EXPOSE 4505
 EXPOSE 4506
 
 VOLUME ["/data"]
+VOLUME ["/var/run/salt"]
 
 ENTRYPOINT ["salt-master"]

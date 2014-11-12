@@ -13,6 +13,11 @@ pillar_roots:
 
 pki_dir: /data/pki
 
+cachedir: /data/cache
+
+sock_dir: /var/run/salt/master
+pidfile: /var/run/salt/master.pid
+
 # The address of the interface to bind to
 #interface: 0.0.0.0
 
@@ -51,15 +56,11 @@ pki_dir: /data/pki
 #ret_port: 4506
 
 # Specify the location of the daemon process ID file
-#pidfile: /var/run/salt-master.pid
 
 # The root directory prepended to these options: pki_dir, cachedir,
 # sock_dir, log_file, autosign_file, autoreject_file, extension_modules,
 # key_logfile, pidfile.
 #root_dir: /
-
-# Directory to store job and cache data
-#cachedir: /var/cache/salt/master
 
 # Verify and set permissions on configuration directories at startup
 #verify_env: True
@@ -84,7 +85,6 @@ pki_dir: /data/pki
 #color: True
 
 # Set the directory used to hold unix sockets
-#sock_dir: /var/run/salt/master
 
 # The master can take a while to start up when lspci and/or dmidecode is used
 # to populate the grains for the master. Enable if you want to see GPU hardware
