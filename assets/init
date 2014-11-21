@@ -52,128 +52,128 @@ WORKER_THREADS=${WORKER_THREADS:-5}
 # Configure app
 ####################
 
-cp /app/master-server-configurable.conf.template \
-    /etc/salt/master.d/master-server-configurable.conf
+cp /app/master-configurable.conf.template \
+    /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{AUTO_ACCEPT}}/'"${AUTO_ACCEPT}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{CYTHON_ENABLE}}/'"${CYTHON_ENABLE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{ENABLE_GPU_GRAINS}}/'"${ENABLE_GPU_GRAINS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{EXTERNAL_NODES}}/'"${EXTERNAL_NODES}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FAILHARD}}/'"${FAILHARD}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FILESERVER_EVENTS}}/'"${FILESERVER_EVENTS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FILESERVER_FOLLOWSYMLINKS}}/'"${FILESERVER_FOLLOWSYMLINKS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FILESERVER_IGNORESYMLINKS}}/'"${FILESERVER_IGNORESYMLINKS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FILESERVER_LIMIT_TRAVERSAL}}/'"${FILESERVER_LIMIT_TRAVERSAL}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FILE_BUFFER_SIZE}}/'"${FILE_BUFFER_SIZE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FILE_RECV}}/'"${FILE_RECV}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{FILE_RECV_MAX_SIZE}}/'"${FILE_RECV_MAX_SIZE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{GITFS_SSL_VERIFY}}/'"${GITFS_SSL_VERIFY}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{HASH_TYPE}}/'"${HASH_TYPE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{IPV6}}/'"${IPV6}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{JINJA_LSTRIP_BLOCKS}}/'"${JINJA_LSTRIP_BLOCKS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{JINJA_TRIM_BLOCKS}}/'"${JINJA_TRIM_BLOCKS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{JOB_CACHE}}/'"${JOB_CACHE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{KEEP_JOBS}}/'"${KEEP_JOBS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{LOG_LEVEL}}/'"${LOG_LEVEL}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{LOOP_INTERVAL}}/'"${LOOP_INTERVAL}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{MASTER_TOPS}}/'"${MASTER_TOPS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{MAX_OPEN_FILES}}/'"${MAX_OPEN_FILES}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{MINION_DATA_CACHE}}/'"${MINION_DATA_CACHE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{OPEN_MODE}}/'"${OPEN_MODE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{ORDER_MASTERS}}/'"${ORDER_MASTERS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{OUTPUT}}/'"${OUTPUT}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{PERMISSIVE_PKI_ACCESS}}/'"${PERMISSIVE_PKI_ACCESS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{PILLAR_GITFS_SSL_VERIFY}}/'"${PILLAR_GITFS_SSL_VERIFY}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{PILLAR_OPTS}}/'"${PILLAR_OPTS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{RANGE_SERVER}}/'"${RANGE_SERVER}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{RENDERER}}/'"${RENDERER}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{RUNNER_DIRS}}/'"${RUNNER_DIRS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{SIGN_PUB_MESSAGES}}/'"${SIGN_PUB_MESSAGES}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{STATE_OUTPUT}}/'"${STATE_OUTPUT}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{STATE_TOP}}/'"${STATE_TOP}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{STATE_VERBOSE}}/'"${STATE_VERBOSE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{TIMEOUT}}/'"${TIMEOUT}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{TOKEN_EXPIRE}}/'"${TOKEN_EXPIRE}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 sed 's/{{WORKER_THREADS}}/'"${WORKER_THREADS}"'/' \
-    -i /etc/salt/master.d/master-server-configurable.conf
+    -i /etc/salt/master.d/master-configurable.conf
 
 
 ##############
